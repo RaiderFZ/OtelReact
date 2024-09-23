@@ -1,0 +1,73 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/vars.scss';
+
+.flats {
+    margin-bottom: 5.0625rem;
+    &-title {
+        @include base-title;
+        margin-bottom: 2.6875rem;
+    }
+    &__cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+    }
+    &__card {
+        max-width: 17.9375rem;
+        border-radius: 0.6875rem;
+        box-shadow: 0px 12.4444px 53.3333px rgba(0, 0, 0, 0.12);
+        transition: all .3s;
+        &:hover {
+            box-shadow: 15px 25.4444px 53.3333px rgba(0, 0, 0, 0.24);
+        }
+    }
+    &__card-image {
+        border-radius: 0.6875rem 0.6875rem 0 0;
+    }
+    
+    &-wrapper{
+        margin: 1.25rem;
+    }
+    &__card-text {
+        @include base-text;
+        margin-bottom: 1.25rem;
+    }
+    &__card-price {
+        & span {
+            color: $action-color;
+            font-size: 2.0625rem;
+            font-weight: 600;
+        }
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+.show-more-button {
+    display: flex;
+    color: #FFF;
+    font-size: 1.25rem;
+    background: $action-color;
+    border: none;
+    max-width: 17.8125rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    justify-content: center;
+    border-radius: 0.4375rem;
+    margin-top: 1.9375rem;
+    transition: all .3s;
+    cursor:  pointer;
+    &:hover {
+        transform: scale(1.01);
+    }
+}
+
+@media (max-width: 600px) {
+    .flats{
+        margin-bottom: 3.75rem;
+        &__card {
+            max-width: 22.1875rem;
+        }
+    } 
+}

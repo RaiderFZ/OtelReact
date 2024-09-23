@@ -1,0 +1,203 @@
+.hero {
+    position: relative;
+    margin-bottom: 3.3125rem;
+    &-wrapper {
+        position: relative;
+    }
+    &-bg {
+        border-radius: 0.5625rem;
+    }
+    & .logo {
+        position: absolute;
+        bottom: 3.0468vw;
+        left: 2.8906vw;
+        max-width: 35.8593vw;
+    }
+    &-button {
+        display: block;
+        position: relative;
+        text-align: center;
+        padding: 1.5625rem 0;
+        margin-left: auto;
+        margin-right: 3.4375vw;
+        margin-top: -1.4375rem;
+        width: calc(20rem + 5vw);
+        max-width: 28.9375rem;
+        color: #FFF;
+        font-size: 1.6875rem;
+        background: #2F80ED;
+        border-radius: 0.5625rem;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s;
+        z-index: 2;
+        &:hover {
+            transform: scale(1.01);
+        }
+    } 
+}
+.popup {
+    position: fixed;
+        top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    transition: all .5s;
+    &.popup-open {
+        top: 50%;
+    }
+    &-rectangle {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 85%;
+        z-index: 5;
+    }
+    &__form {
+        width: 50rem;
+        border-radius: .5rem;
+        background: #FFF;
+        padding: 1.5625rem;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        
+    }
+    &__form-input {
+        margin-bottom: 0.9375rem;
+        width: 100%;
+        padding: 1.875rem;
+        border: none;
+        border-radius: 0.625rem;
+        background: #E0E6ED;
+        font-size: 1.5rem;
+        line-height: 1.25;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &::placeholder{
+            color: #929292;
+        }
+        &.textarea {
+            resize: none;
+            height: 24.25rem;
+            overflow: hidden;
+        }
+    }
+    &__form-button {
+        width: 100%;
+        border: none;
+        border-radius: 0.625rem;
+        background: #2F80ED;
+        color: #FFF;
+        padding: 1.875rem;
+        font-size: 1.5625rem;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+    &__description {
+        width: 50rem;
+        padding: 1.5625rem;
+        background: #FFF;
+        border-radius: .5rem;
+    }
+    &__description-title {
+        font-size: 1.25rem;
+        margin-bottom: 1.125rem;
+        color: #4A4A4A;
+    }
+    &__rules {
+        display: flex;
+        gap: 3.75rem;
+        margin-bottom: 2.5rem;
+    }
+    &__rules-title {
+        font-size: 1rem;
+        margin-bottom: 0.625rem;
+        color: #6D6D6D;
+    }
+    &__rules-text {
+        font-size: 0.875rem;
+        color: #A8A8A8;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        flex-wrap: wrap;
+        column-gap: 4.125rem;
+        row-gap: 1rem;
+        margin-bottom: 1.4375rem;
+    } 
+    &__list-item {
+       position: relative;
+       display: flex;
+       align-items: center;
+       padding-left: 20px;
+    }
+    &__list-item::before {
+        content: '•'; 
+        position: absolute;
+        left: 0;
+        color: blue; 
+        font-size: 1.2em; 
+        line-height: 1.2em; 
+    }
+    &-price {
+        display: inline-block;
+        background: #FFE69A;
+        padding: 0.3125rem;
+        border-radius: 0.3125rem;
+        font-size: 0.875rem;
+        color: #6D6D6D;
+        font-weight: 500;
+        & span {
+            color: #838383;
+            font-weight: 400;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .hero-button {
+        border: none;
+        width: calc(10rem + 11.171975vw); 
+    }
+}
+@media (max-width: 600px) {
+    .hero {
+        margin-bottom: 2.125rem;
+    }
+    .hero-bg {
+        border-radius: 0.5625rem;
+    }
+    .hero .logo {
+        bottom: 2rem;
+    }
+    .hero-button {
+        width: 100%;
+        max-width:20.9375rem;
+        margin: 0 auto;
+        margin-top: -1.4375rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero .logo {
+        bottom: 1.5rem;
+    }
+    .hero-button {
+       max-width:15.9375rem;
+        font-size: 1rem;
+        padding: 1rem 0; 
+        margin-top: -1rem;
+    }
+    
+}

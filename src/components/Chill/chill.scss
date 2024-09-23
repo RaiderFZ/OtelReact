@@ -1,0 +1,38 @@
+@import '../../scss/mixins.scss';
+
+.chill {
+    margin-bottom: 5.1875rem;
+    &-title {
+        @include base-title;
+        margin-bottom: 3.125rem;
+    }
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+    &__grid-item {
+        display: flex;
+        align-items: center;
+        max-width: 24.3125rem;
+        width: 100%;
+        padding: 1.5625rem;
+        border-radius: 1rem;
+        box-shadow: 0px 12.4444px 53.3333px rgba(0, 0, 0, 0.12);
+        transition: all .3s;
+        &:hover {
+            box-shadow: 15px 25.4444px 53.3333px rgba(0, 0, 0, 0.24);
+        }
+    }
+    &__grid-url {
+        width: 4.875rem;
+        height: 4.875rem;
+        margin-right: 2.0312vw;
+    }
+    &__grid-title {
+        font-size: 1.4375rem;
+        font-weight: 500;
+        color: #434343;
+    }
+}

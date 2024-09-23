@@ -1,0 +1,30 @@
+.App {
+    padding: 0 2.1875rem;
+}
+@media (max-width: 600px) {
+    .App {
+        padding: 0 0.625rem;
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+    background: rgb(47,128,237);
+    background: radial-gradient(circle, rgba(47,128,237,1) 35%, rgba(0,212,255,0.17970938375350143) 100%);
+    color: #FFF;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 1000;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
